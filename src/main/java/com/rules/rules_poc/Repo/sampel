@@ -1,0 +1,15 @@
+{
+        "id": 1,
+        "ifcondition": "$candidate : Candidate() eval(candidateUtils.isAmexCard($candidate) && candidateUtils.isWPlusCustomer($candidate) && $candidate.isExonMember == true)",
+        "thencondition": "Asset asset1 = new Asset(); asset1.setId(101); asset1.setDescription('Amex & Wplus member'); insert(asset1);",
+        "version": 1,
+        "salience": 10
+    }
+
+    {
+            "id": 1,
+            "ifcondition": "$candidate : Candidate() eval(candidateUtils.isAmexCard($candidate) && candidateUtils.isWPlusCustomer($candidate)) && ($candidate.isExonMember == true)",
+            "thencondition": "Asset asset1 = new Asset(); asset1.setId(101); asset1.setDescription('Amex & Wplus member'); insert(asset1);",
+            "version": 1,
+            "salience": 10
+        }
